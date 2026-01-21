@@ -1,0 +1,91 @@
+:root {
+    --box-size: 120px;
+    --border-radius: 12px;
+    --cross-color: #de1b1b;
+    --circle-color: #1877f2;
+    --grid-gap: 16px;
+}
+
+body {
+    background: #f4f7fa;
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+/* Mřížka pro hru (3x3) */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, var(--box-size));
+    grid-template-rows: repeat(3, var(--box-size));
+    gap: var(--grid-gap);
+    justify-content: center;
+    align-items: center;
+    margin: 40px auto;
+    background: #fff;
+    border-radius: calc(var(--border-radius) + var(--grid-gap));
+    box-shadow: 0 2px 16px rgba(34, 69, 100, 0.07);
+    padding: 28px 18px;
+    max-width: 420px;
+}
+
+/* Styl políček */
+.box {
+    width: var(--box-size);
+    height: var(--box-size);
+    background: #fdfdfd;
+    border: 3px solid #bbb;
+    border-radius: var(--border-radius);
+    box-sizing: border-box;
+    position: relative;
+    cursor: pointer;
+    transition: background 0.2s, box-shadow 0.2s;
+    box-shadow: 0 1px 6px rgba(100, 100, 100, 0.06);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.4rem;
+}
+
+.box:hover {
+    background: #f1fafe;
+    border-color: #1877f2;
+
+}
+
+.flex {
+    border-radius: var(--border-radius);
+    color: #fff;
+    padding: 20px;
+
+    width: 90%;
+    margin: 20px auto;
+    background: #111111;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.flex h1 {
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+.flex div:nth-child(1) {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.flex p {
+    font-size: 1rem;
+    margin: 0;
+}
+
+.flex button {
+    cursor: pointer;
+    border-radius: calc(var(--border-radius) / 2);
+    padding: 10px 20px;
+    background: #dca631;
+    border: none;
+    color: #000000;
+    font-weight: bold;
+}
