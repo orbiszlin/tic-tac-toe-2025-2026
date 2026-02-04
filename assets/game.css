@@ -1,0 +1,34 @@
+.box.cross,
+.box.circle {
+    position: relative;
+}
+
+.box.cross:after,
+.box.cross:before,
+.box.circle:after {
+    content: '';
+    position: absolute;
+}
+
+.box.cross:before,
+.box.cross:after {
+    height: 5px;
+    width: 100%;
+    background: red;
+    border-radius: 3px;
+}
+
+.box.cross:before {
+    transform: rotate(45deg);
+}
+
+.box.cross:after {
+    transform: rotate(-45deg);
+}
+
+.box.circle:after {
+    width: 80%;
+    height: 80%;
+    border: 5px solid blue;
+    border-radius: 50%;
+}
